@@ -23,12 +23,32 @@ namespace Banco
                                     ('" + this.numero + "','"+ dataCadastro +"','"+ this.titular +"','"+ this.saldo +"')");
         }
 
+        public void AlterarConta()
+        {
+            this.conexao.NonQuery(@"UPDATE tb_contas SET numero = '"+ this.numero +"', data_cadastro = '"+ this.dataCadastro +"', " +
+                "titular = '"+ this.titular+"', saldo = '"+ this.saldo +"' WHERE id_conta = '"+ this.id_conta +"'");
+        }
+
         public MySqlDataReader ListarContas()
         {
             return this.conexao.Query("SELECT * FROM tb_contas order by titular");
         }
 
-        public int id { get; set; }
+        public MySqlDataReader ListarContas(String campo, String filtro)
+        {
+            if (filtro == "")
+            {
+                return ListarContas();
+            }
+            return this.conexao.Query("SELECT titular FROM tb_contas where " + campo + " = '" + filtro + "'order by id_conta");
+        }
+
+        public MySqlDataReader BuscarConta(String campo)
+        {
+            return this.conexao.Query("SELECT * FROM tb_contas where numero='" + campo + "'");
+        }
+
+        public int id_conta { get; set; }
         public int numero { get; set; }
         public string dataCadastro { get; set; }
         public string titular { get; set; }

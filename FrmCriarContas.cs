@@ -77,5 +77,18 @@ namespace Banco
             this.AtualizarTabela();
             this.LimparCampos();
         }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            this.conta.numero = Convert.ToInt32(txt_numero.Text);
+            this.conta.dataCadastro = lbl_dataAbertura.Text;
+            this.conta.titular = txt_titular.Text;
+            this.conta.saldo = Convert.ToDouble(txt_saldo.Text);
+            this.conta.id_conta = Convert.ToInt32(txt_idConta.Text);
+            this.conta.AlterarConta();
+            MessageBox.Show("Conta editada no banco com sucesso!");
+            this.AtualizarTabela();
+            this.LimparCampos();
+        }
     }
 }

@@ -34,5 +34,11 @@ namespace Banco
         {
             this.Close();
         }
+
+        private void tsm_abrirCaixa_Click(object sender, EventArgs e)
+        {
+            FrmCaixaEletronico frmCaixaEletronico = new FrmCaixaEletronico();
+            frmCaixaEletronico.ShowDialog();
+        }
     }
 }

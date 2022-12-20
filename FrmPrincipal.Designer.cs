@@ -38,6 +38,7 @@
             this.lbl_usuarioLogado = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tsm_abrirCaixa = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,8 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_abrirConta});
+            this.tsm_abrirConta,
+            this.tsm_abrirCaixa});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
@@ -66,7 +68,7 @@
             // tsm_abrirConta
             // 
             this.tsm_abrirConta.Name = "tsm_abrirConta";
-            this.tsm_abrirConta.Size = new System.Drawing.Size(154, 22);
+            this.tsm_abrirConta.Size = new System.Drawing.Size(180, 22);
             this.tsm_abrirConta.Text = "Abrir conta";
             this.tsm_abrirConta.Click += new System.EventHandler(this.tsm_abrirConta_Click);
             // 
@@ -143,6 +145,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuário Logado";
             // 
+            // tsm_abrirCaixa
+            // 
+            this.tsm_abrirCaixa.Name = "tsm_abrirCaixa";
+            this.tsm_abrirCaixa.Size = new System.Drawing.Size(180, 22);
+            this.tsm_abrirCaixa.Text = "Abrir Caixa";
+            this.tsm_abrirCaixa.Click += new System.EventHandler(this.tsm_abrirCaixa_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -178,5 +187,6 @@
         private Label label1;
         private ToolStripMenuItem opçõesToolStripMenuItem;
         private ToolStripMenuItem tsm_sair;
+        private ToolStripMenuItem tsm_abrirCaixa;
     }
 }
