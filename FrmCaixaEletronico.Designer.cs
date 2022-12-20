@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_numeroContaAReceber = new System.Windows.Forms.MaskedTextBox();
+            this.txt_numeroConta = new System.Windows.Forms.MaskedTextBox();
             this.txt_titularConta2 = new System.Windows.Forms.TextBox();
             this.txt_dataConta2 = new System.Windows.Forms.TextBox();
             this.txt_idConta2 = new System.Windows.Forms.TextBox();
             this.lbl_saldoT = new System.Windows.Forms.Label();
-            this.txt_numeroContaAReceber = new System.Windows.Forms.TextBox();
             this.lbl_contaAReceber = new System.Windows.Forms.Label();
             this.txt_valorTransferencia = new System.Windows.Forms.TextBox();
             this.lbl_valorTransferencia = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_contaNumero = new System.Windows.Forms.Label();
             this.btn_entrar = new System.Windows.Forms.Button();
-            this.txt_numeroConta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_titular = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,11 +63,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_numeroContaAReceber);
+            this.groupBox1.Controls.Add(this.txt_numeroConta);
             this.groupBox1.Controls.Add(this.txt_titularConta2);
             this.groupBox1.Controls.Add(this.txt_dataConta2);
             this.groupBox1.Controls.Add(this.txt_idConta2);
             this.groupBox1.Controls.Add(this.lbl_saldoT);
-            this.groupBox1.Controls.Add(this.txt_numeroContaAReceber);
             this.groupBox1.Controls.Add(this.lbl_contaAReceber);
             this.groupBox1.Controls.Add(this.txt_valorTransferencia);
             this.groupBox1.Controls.Add(this.lbl_valorTransferencia);
@@ -88,7 +89,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lbl_contaNumero);
             this.groupBox1.Controls.Add(this.btn_entrar);
-            this.groupBox1.Controls.Add(this.txt_numeroConta);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbl_titular);
             this.groupBox1.Controls.Add(this.label1);
@@ -100,12 +100,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Caixa Eletrônico";
             // 
+            // txt_numeroContaAReceber
+            // 
+            this.txt_numeroContaAReceber.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_numeroContaAReceber.Location = new System.Drawing.Point(671, 262);
+            this.txt_numeroContaAReceber.Mask = "000000";
+            this.txt_numeroContaAReceber.Name = "txt_numeroContaAReceber";
+            this.txt_numeroContaAReceber.Size = new System.Drawing.Size(134, 26);
+            this.txt_numeroContaAReceber.TabIndex = 31;
+            this.txt_numeroContaAReceber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_numeroContaAReceber.ValidatingType = typeof(int);
+            this.txt_numeroContaAReceber.Visible = false;
+            // 
+            // txt_numeroConta
+            // 
+            this.txt_numeroConta.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_numeroConta.Location = new System.Drawing.Point(201, 36);
+            this.txt_numeroConta.Mask = "000000";
+            this.txt_numeroConta.Name = "txt_numeroConta";
+            this.txt_numeroConta.Size = new System.Drawing.Size(178, 26);
+            this.txt_numeroConta.TabIndex = 0;
+            this.txt_numeroConta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_numeroConta.ValidatingType = typeof(int);
+            // 
             // txt_titularConta2
             // 
             this.txt_titularConta2.Location = new System.Drawing.Point(705, 80);
             this.txt_titularConta2.Name = "txt_titularConta2";
             this.txt_titularConta2.Size = new System.Drawing.Size(100, 23);
             this.txt_titularConta2.TabIndex = 30;
+            this.txt_titularConta2.Visible = false;
             // 
             // txt_dataConta2
             // 
@@ -113,6 +137,7 @@
             this.txt_dataConta2.Name = "txt_dataConta2";
             this.txt_dataConta2.Size = new System.Drawing.Size(100, 23);
             this.txt_dataConta2.TabIndex = 29;
+            this.txt_dataConta2.Visible = false;
             // 
             // txt_idConta2
             // 
@@ -120,6 +145,7 @@
             this.txt_idConta2.Name = "txt_idConta2";
             this.txt_idConta2.Size = new System.Drawing.Size(52, 23);
             this.txt_idConta2.TabIndex = 28;
+            this.txt_idConta2.Visible = false;
             // 
             // lbl_saldoT
             // 
@@ -131,17 +157,6 @@
             this.lbl_saldoT.Text = "saldo";
             this.lbl_saldoT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_saldoT.Visible = false;
-            // 
-            // txt_numeroContaAReceber
-            // 
-            this.txt_numeroContaAReceber.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_numeroContaAReceber.Location = new System.Drawing.Point(671, 262);
-            this.txt_numeroContaAReceber.Name = "txt_numeroContaAReceber";
-            this.txt_numeroContaAReceber.Size = new System.Drawing.Size(100, 26);
-            this.txt_numeroContaAReceber.TabIndex = 26;
-            this.txt_numeroContaAReceber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_numeroContaAReceber.Visible = false;
-            this.txt_numeroContaAReceber.TextChanged += new System.EventHandler(this.CONFIRMAR);
             // 
             // lbl_contaAReceber
             // 
@@ -162,7 +177,8 @@
             this.txt_valorTransferencia.TabIndex = 24;
             this.txt_valorTransferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_valorTransferencia.Visible = false;
-            this.txt_valorTransferencia.TextChanged += new System.EventHandler(this.CONFIRMAR);
+            this.txt_valorTransferencia.TextChanged += new System.EventHandler(this.txt_valorTransferencia_TextChanged);
+            this.txt_valorTransferencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valorTransferencia_KeyPress);
             // 
             // lbl_valorTransferencia
             // 
@@ -207,7 +223,8 @@
             this.txt_valorSaque.TabIndex = 20;
             this.txt_valorSaque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_valorSaque.Visible = false;
-            this.txt_valorSaque.TextChanged += new System.EventHandler(this.CONFIRMAR);
+            this.txt_valorSaque.TextChanged += new System.EventHandler(this.txt_valorSaque_TextChanged);
+            this.txt_valorSaque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valorSaque_KeyPress);
             // 
             // lbl_valorSaque
             // 
@@ -257,7 +274,8 @@
             this.txt_valorDeposito.TabIndex = 15;
             this.txt_valorDeposito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_valorDeposito.Visible = false;
-            this.txt_valorDeposito.TextChanged += new System.EventHandler(this.CONFIRMAR);
+            this.txt_valorDeposito.TextChanged += new System.EventHandler(this.txt_valorDeposito_TextChanged);
+            this.txt_valorDeposito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valorDeposito_KeyPress);
             // 
             // lbl_valorDeposito
             // 
@@ -358,15 +376,6 @@
             this.btn_entrar.UseVisualStyleBackColor = true;
             this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             // 
-            // txt_numeroConta
-            // 
-            this.txt_numeroConta.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_numeroConta.Location = new System.Drawing.Point(201, 36);
-            this.txt_numeroConta.Name = "txt_numeroConta";
-            this.txt_numeroConta.Size = new System.Drawing.Size(174, 26);
-            this.txt_numeroConta.TabIndex = 3;
-            this.txt_numeroConta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -417,7 +426,6 @@
 
         private GroupBox groupBox1;
         private Button btn_entrar;
-        private TextBox txt_numeroConta;
         private Label label2;
         private Label lbl_titular;
         private Label label1;
@@ -439,11 +447,12 @@
         private Button btn_transferencia;
         private TextBox txt_valorTransferencia;
         private Label lbl_valorTransferencia;
-        private TextBox txt_numeroContaAReceber;
         private Label lbl_contaAReceber;
         private Label lbl_saldoT;
         private TextBox txt_dataConta2;
         private TextBox txt_idConta2;
         private TextBox txt_titularConta2;
+        private MaskedTextBox txt_numeroConta;
+        private MaskedTextBox txt_numeroContaAReceber;
     }
 }

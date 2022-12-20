@@ -373,12 +373,82 @@ namespace Banco
             this.Dispose();
         }
 
-        
-
-
-        private void CONFIRMAR(object sender, EventArgs e)
+        private void txt_valorDeposito_TextChanged(object sender, EventArgs e)
         {
+            if (txt_valorDeposito.Text.Substring(0) == ",")
+            {
+                txt_valorDeposito.Text = "0" + txt_valorDeposito.Text;
+            }
+        }
 
+        private void txt_valorDeposito_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (((int)e.KeyChar) != ((int)Keys.Back))
+                {
+                    if (e.KeyChar != ',')
+                    {
+                        e.Handled = true;
+                    }
+                    else if (txt_valorDeposito.Text.IndexOf(',') > 0)
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void txt_valorSaque_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_valorSaque.Text.Substring(0) == ",")
+            {
+                txt_valorSaque.Text = "0" + txt_valorSaque.Text;
+            }
+        }
+
+        private void txt_valorSaque_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (((int)e.KeyChar) != ((int)Keys.Back))
+                {
+                    if (e.KeyChar != ',')
+                    {
+                        e.Handled = true;
+                    }
+                    else if (txt_valorSaque.Text.IndexOf(',') > 0)
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void txt_valorTransferencia_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_valorTransferencia.Text.Substring(0) == ",")
+            {
+                txt_valorTransferencia.Text = "0" + txt_valorTransferencia.Text;
+            }
+        }
+
+        private void txt_valorTransferencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (((int)e.KeyChar) != ((int)Keys.Back))
+                {
+                    if (e.KeyChar != ',')
+                    {
+                        e.Handled = true;
+                    }
+                    else if (txt_valorTransferencia.Text.IndexOf(',') > 0)
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
         }
     }
 }
